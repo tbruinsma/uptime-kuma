@@ -13,6 +13,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build the uptime-kuma-TB Docker image
         run: |
-          docker build . --tag ghcr.io/tbruinsma/uptime-kuma:latest
+          docker build ./docker --tag ghcr.io/tbruinsma/uptime-kuma:latest
           docker run ghcr.io/tbruinsma/uptime-kuma:latest
           docker push ghcr.io/tbruinsma/uptime-kuma:latest
